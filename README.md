@@ -1,54 +1,77 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+# Project notes
 
-## 🚀 Quick start
+## Category schema
 
-1.  **Create a Gatsby site.**
+```yaml
+root:
+  - name: 'wszystko'
+    sub:
+      - name: 'męskie'
+        sub:
+          - name: 'koszule-body'
+          - name: 'spodnie'
+          - name: 'koszule'
+      - name: 'damskie'
+        sub:
+          - name: 'body'
+          - name: 'sukienki'
+```
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Product schema
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+```yaml
+---
+name: 'body do tańca towarzyskiego'
+slug: 'męskie/koszule-body/body-do-tańca-towarzyskiego'
+category: 'męskie/koszule-body'
+tags:
+  - 'nowość'
+  - 'bestseller'
+colors:
+  - name: 'biały'
+    hex: '#fff'
+  - name: 'czarny'
+    hex: '#000'
+prices:
+  122: 100
+  128: 110
+  134: 120
+  140: 130
+  146: 140
+  152: 150
+  158: 160
+  164: 170
+  170: 180
+  176: 190
+  180: 200
+  185: 210
+  190: 220
+  195: 230
+images:
+  - source: './body-do-tańca-towarzyskiego-1.jpg'
+    text: 'Lorem ipsum dolor sit amet'
+    alt: 'body do tańca towarzyskiego'
+  - source: './body-do-tańca-towarzyskiego-2.jpg'
+    alt: 'body do tańca towarzyskiego'
+  - source: './body-do-tańca-towarzyskiego-3.jpg'
+    alt: 'body do tańca towarzyskiego'
+relatedProducts:
+  TODO
+dimensions:
+  - 1
+  - 3
+  - 8
+  - 9
+---
 
-2.  **Start developing.**
+### Opis
 
-    Navigate into your new site’s directory and start it up.
+Enim sint velit velit qui non ad in exercitation
+reprehenderit commodo elit sit elit laboris.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Cechy
 
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+- lorem ipsum,
+- lorem ipsum,
+- lorem ipsum.
+```

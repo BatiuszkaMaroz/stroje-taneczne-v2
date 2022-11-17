@@ -5,6 +5,6 @@
     }
   ],
   "settings": {
-    "cSpell.ignorePaths": ["./project-notes.md"]
+    "cSpell.ignorePaths": ["./README.md"]
   }
 }
