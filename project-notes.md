@@ -1,13 +1,29 @@
 # Project notes
 
+## Category schema
+
+```yaml
+root:
+  - name: 'wszystko'
+    sub:
+      - name: 'męskie'
+        sub:
+          - name: 'koszule-body'
+          - name: 'spodnie'
+          - name: 'koszule'
+      - name: 'damskie'
+        sub:
+          - name: 'body'
+          - name: 'sukienki'
+```
+
 ## Product schema
 
 ```yaml
 ---
 name: 'body do tańca towarzyskiego'
-slug: 'body-do-tańca-towarzyskiego'
-category:
-  TODO
+slug: 'męskie/koszule-body/body-do-tańca-towarzyskiego'
+category: 'męskie/koszule-body'
 tags:
   - 'nowość'
   - 'bestseller'
