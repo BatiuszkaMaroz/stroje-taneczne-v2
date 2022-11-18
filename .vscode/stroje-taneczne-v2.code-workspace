@@ -5,6 +5,7 @@
     }
   ],
   "settings": {
-    "cSpell.ignorePaths": ["./README.md"]
+    "cSpell.ignorePaths": ["./README.md"],
+    "typescript.tsdk": "node_modules/typescript/lib"
   }
 }
