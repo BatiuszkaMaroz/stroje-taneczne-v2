@@ -13,7 +13,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "gatsby": "^5.0.0",
@@ -21,6 +23,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@graphql-eslint/eslint-plugin": "^3.13.1",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
