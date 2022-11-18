@@ -6,7 +6,18 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   graphqlTypegen: true,
-  plugins: ['gatsby-plugin-eslint'],
+  plugins: [
+    'gatsby-plugin-eslint',
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@': 'src',
+        },
+        extensions: ['ts', 'tsx'],
+      },
+    },
+  ],
 };
 
 export default config;
