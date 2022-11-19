@@ -21,8 +21,12 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {},
+  "rules": {
+    // disable warning on function arguments
+    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }]
+  },
   "settings": {
+    // detect react version
     "react": {
       "version": "detect"
     }

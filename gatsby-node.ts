@@ -1,4 +1,4 @@
-import type { GatsbyNode, CreateWebpackConfigArgs } from 'gatsby';
+import type { CreateWebpackConfigArgs } from 'gatsby';
 import path from 'path';
 
 export const onCreateWebpackConfig = ({
