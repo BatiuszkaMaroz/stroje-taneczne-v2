@@ -7,6 +7,15 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
+    // data source
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `products`,
+        path: `${__dirname}/products`,
+      },
+    },
     // images
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
