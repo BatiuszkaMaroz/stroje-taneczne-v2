@@ -49,7 +49,7 @@ prices:
   195: 230
 images:
   - source: './body-do-tańca-towarzyskiego-1.jpg'
-    text: 'Lorem ipsum dolor sit amet'
+    text: 'Lorem ipsum'
     alt: 'body do tańca towarzyskiego'
   - source: './body-do-tańca-towarzyskiego-2.jpg'
     alt: 'body do tańca towarzyskiego'
@@ -66,8 +66,7 @@ dimensions:
 
 ### Opis
 
-Enim sint velit velit qui non ad in exercitation
-reprehenderit commodo elit sit elit laboris.
+Lorem ipsum. Lorem ipsum. Lorem ipsum.
 
 ### Cechy
 

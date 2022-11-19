@@ -7,7 +7,7 @@ export const onCreateWebpackConfig = ({
 }: CreateWebpackConfigArgs) => {
   actions.setWebpackConfig({
     resolve: {
-      // first search in src then in node_modules
+      // look for modules in 'src' then in 'node_modules'
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
   });

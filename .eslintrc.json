@@ -9,8 +9,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:react-hooks/recommended", // hooks rules
+    "plugin:jsx-a11y/recommended" // accessibility
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
