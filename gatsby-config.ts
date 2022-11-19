@@ -6,7 +6,15 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   graphqlTypegen: true,
-  plugins: ['gatsby-plugin-eslint', 'gatsby-plugin-ts-checker'],
+  plugins: [
+    // images
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    // lint/typecheck
+    'gatsby-plugin-eslint',
+    'gatsby-plugin-ts-checker',
+  ],
 };
 
 export default config;
