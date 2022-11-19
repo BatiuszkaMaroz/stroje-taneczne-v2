@@ -109,6 +109,7 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 
 ### Other
 
-- [Typecheck](https://www.gatsbyjs.com/plugins/gatsby-plugin-ts-checker/?=ts%20checker),
-- [MDX as data source](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/?=gatsby-plugin-mdx),
-- [Images](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/?=gatsby%20image).
+- [Typecheck](https://www.gatsbyjs.com/plugins/gatsby-plugin-ts-checker/?=ts%20checker)
+- [MDX as data source](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/?=gatsby-plugin-mdx)
+- [Images](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/?=gatsby%20image)
+- [Tailwind.css](https://tailwindcss.com/docs/guides/gatsby)

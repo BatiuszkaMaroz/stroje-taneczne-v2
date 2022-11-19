@@ -2,6 +2,14 @@
   "folders": [
     {
       "path": ".."
+    },
+    {
+      "name": "products",
+      "path": "../products"
+    },
+    {
+      "name": "src",
+      "path": "../src"
     }
   ],
   "settings": {

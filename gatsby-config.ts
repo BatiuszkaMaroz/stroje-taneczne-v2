@@ -16,6 +16,8 @@ const config: GatsbyConfig = {
         path: `${__dirname}/products`,
       },
     },
+    // tailwind
+    'gatsby-plugin-postcss',
     // images
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
