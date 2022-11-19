@@ -1,6 +1,8 @@
 # Project notes
 
-## Category schema
+## Schemas
+
+### Category
 
 ```yaml
 root:
@@ -17,7 +19,7 @@ root:
           - name: 'sukienki'
 ```
 
-## Product schema
+### Product
 
 ```yaml
 ---
@@ -74,3 +76,39 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 - lorem ipsum,
 - lorem ipsum.
 ```
+
+## Setup explanation
+
+### Eslint
+
+1. Install and use `gatsby-plugin-eslint`.
+1. Run `npx eslint --init` (react, ts, browser + node, json).
+1. Install and use selected plugins from eslint-plugin-react [other-useful-plugins](https://www.npmjs.com/package/eslint-plugin-react#other-useful-plugins).
+1. Configure [graphql-eslint](https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/#graphql-eslint).
+1. In `eslintrc.json` set:
+
+```json
+  "rules": {
+    // disable warning on function arguments
+    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }]
+  }
+
+  "settings": {
+    // detect react version
+    "react": {
+      "version": "detect"
+    }
+  },
+```
+
+### `src` as baseUrl
+
+1. Set baseUrl in `tsconfig.json`.
+1. Configure [absolute imports](https://www.gatsbyjs.com/docs/how-to/custom-configuration/add-custom-webpack-config/#absolute-imports).
+1. Set path aliases (optional).
+
+### Other
+
+- [Typecheck](https://www.gatsbyjs.com/plugins/gatsby-plugin-ts-checker/?=ts%20checker),
+- [MDX as data source](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/?=gatsby-plugin-mdx),
+- [Images](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/?=gatsby%20image).
