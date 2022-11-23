@@ -1,11 +1,11 @@
+import Layout from 'components/layout';
 import * as React from 'react';
-import Title from 'components/title';
 
 function IndexPage() {
   return (
-    <div>
-      <Title>Hello world</Title>
-    </div>
+    <Layout>
+      <p>Hello world</p>
+    </Layout>
   );
 }
 

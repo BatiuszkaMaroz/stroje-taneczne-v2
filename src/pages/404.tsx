@@ -1,10 +1,11 @@
+import Layout from 'components/layout';
 import * as React from 'react';
 
 function NotFoundPage() {
   return (
-    <div>
+    <Layout>
       <p>Page not found</p>
-    </div>
+    </Layout>
   );
 }
 
