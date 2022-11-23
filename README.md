@@ -113,3 +113,7 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 - [MDX as data source](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/?=gatsby-plugin-mdx)
 - [Images](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/?=gatsby%20image)
 - [Tailwind.css](https://tailwindcss.com/docs/guides/gatsby)
+
+### Layout
+
+- [link](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)
