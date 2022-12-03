@@ -58,7 +58,7 @@ images:
   - source: './body-do-tańca-towarzyskiego-3.jpg'
     alt: 'body do tańca towarzyskiego'
 relatedProducts:
-  TODO
+  - './spodnie-do-tańca-towarzyskiego.mdx'
 dimensions:
   - 1
   - 3
@@ -76,6 +76,22 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 - lorem ipsum,
 - lorem ipsum.
 ```
+
+## Page structure
+
+- **Strona główna** `/`
+- **Oferta** `/oferta`
+  - **Mężczyźni i chłopcy** `/mezczyzni-chlopcy`
+    - Kategoria `/kategoria`
+      - Przedmiot `/przedmiot`
+  - **Dziewczynki** `/dziewczynki`
+    - Kategoria `/kategoria`
+      - Przedmiot `/przedmiot`
+- **Wymiary** `/wymiary`
+- **Zamówienia** `/zamowienia`
+- **Kontakt** `/kontakt` - email, telefon, adres i mapa.
+- **Ulubione** - side panel
+- Search box - in header
 
 ## Setup explanation
 
