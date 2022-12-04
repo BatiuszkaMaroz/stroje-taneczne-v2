@@ -2,8 +2,8 @@ import * as React from 'react';
 
 function Footer() {
   return (
-    <footer>
-      <p>footer</p>
+    <footer className='w-100 p-5 flex justify-center'>
+      <p>Footer</p>
     </footer>
   );
 }

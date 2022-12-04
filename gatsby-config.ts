@@ -42,6 +42,13 @@ const config: GatsbyConfig = {
         languages: [`pl`, `en`],
         defaultLanguage: `pl`,
         siteUrl,
+        pages: [
+          {
+            matchPath: '/:lang?/oferta/:uid',
+            getLanguageFromPath: true,
+            excludeLanguages: [`pl`, `en`],
+          },
+        ],
       },
     },
   ],

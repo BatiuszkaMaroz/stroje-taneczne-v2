@@ -4,9 +4,9 @@ import * as React from 'react';
 
 function Layout({ children }: React.PropsWithChildren) {
   return (
-    <div>
+    <div className='container mx-auto'>
       <Header />
-      <main>{children}</main>
+      <main className='p-5'>{children}</main>
       <Footer />
     </div>
   );
