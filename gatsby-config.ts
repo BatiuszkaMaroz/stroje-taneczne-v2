@@ -1,9 +1,11 @@
 import type { GatsbyConfig } from 'gatsby';
 
+const siteUrl = `https://www.yourdomain.tld`;
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `stroje-taneczne-v2`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl,
   },
   graphqlTypegen: true,
   plugins: [
@@ -17,14 +19,31 @@ const config: GatsbyConfig = {
       },
     },
     // tailwind
-    'gatsby-plugin-postcss',
+    `gatsby-plugin-postcss`,
     // images
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     // lint/typecheck
-    'gatsby-plugin-eslint',
-    'gatsby-plugin-ts-checker',
+    `gatsby-plugin-eslint`,
+    `gatsby-plugin-ts-checker`,
+    // i18n
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
+        path: `${__dirname}/locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`pl`, `en`],
+        defaultLanguage: `pl`,
+        siteUrl,
+      },
+    },
   ],
 };
 

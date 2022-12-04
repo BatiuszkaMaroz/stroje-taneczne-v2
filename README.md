@@ -133,3 +133,8 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 ### Layout
 
 - [link](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)
+
+### I18n
+
+- [gatsby-plugin-react-i18next](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-i18next/)
+- [use gatsby-node](https://github.com/microapps/gatsby-plugin-react-i18next/issues/129)
