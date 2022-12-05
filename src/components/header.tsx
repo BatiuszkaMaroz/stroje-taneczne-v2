@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { Link } from 'gatsby-plugin-react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 function Header() {
+  const { languages } = useI18next();
+  console.log(languages);
+
   return (
     <header className='w-100 p-5 flex justify-between'>
       <p>Header</p>

@@ -138,3 +138,4 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 
 - [gatsby-plugin-react-i18next](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-i18next/)
 - [use gatsby-node](https://github.com/microapps/gatsby-plugin-react-i18next/issues/129)
+- jest problem z gatsby-ssr i gatsby-browser !!! https://andremonteiro.pt/gatsby-i18next-wrap-page-element/

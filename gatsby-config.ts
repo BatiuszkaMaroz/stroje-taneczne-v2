@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby';
+import { defaultLanguage, languages } from './languages';
 
 const siteUrl = `https://www.yourdomain.tld`;
 
@@ -14,8 +15,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `products`,
         path: `${__dirname}/products`,
+        name: `products`,
       },
     },
     // tailwind
@@ -31,24 +32,16 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/locales`,
         name: `locale`,
-        path: `${__dirname}/locale`,
       },
     },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`,
-        languages: [`pl`, `en`],
-        defaultLanguage: `pl`,
+        languages,
+        defaultLanguage,
         siteUrl,
-        pages: [
-          {
-            matchPath: '/:lang?/oferta/:uid',
-            getLanguageFromPath: true,
-            excludeLanguages: [`pl`, `en`],
-          },
-        ],
       },
     },
   ],

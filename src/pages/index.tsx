@@ -1,6 +1,6 @@
+import { graphql } from 'gatsby';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import * as React from 'react';
-import { graphql } from 'gatsby';
 
 function IndexPage() {
   return (
