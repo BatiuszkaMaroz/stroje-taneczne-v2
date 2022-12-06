@@ -2,15 +2,15 @@
   "folders": [
     {
       "path": ".."
-    },
-    {
-      "name": "products",
-      "path": "../products"
-    },
-    {
-      "name": "src",
-      "path": "../src"
     }
+    // {
+    //   "name": "products",
+    //   "path": "../products"
+    // },
+    // {
+    //   "name": "src",
+    //   "path": "../src"
+    // }
   ],
   "settings": {
     "typescript.tsdk": "node_modules/typescript/lib"
