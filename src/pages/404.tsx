@@ -1,7 +1,8 @@
+import Seo from 'components/seo';
 import * as React from 'react';
 
-function NotFoundPage() {
+export default function NotFoundPage() {
   return <p>Page not found</p>;
 }
 
-export default NotFoundPage;
+export const Head = () => <Seo />;

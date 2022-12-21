@@ -1,7 +1,8 @@
+import Seo from 'components/seo';
 import * as React from 'react';
 
-function IndexPage() {
+export default function IndexPage() {
   return <p>Hello world</p>;
 }
 
-export default IndexPage;
+export const Head = () => <Seo />;

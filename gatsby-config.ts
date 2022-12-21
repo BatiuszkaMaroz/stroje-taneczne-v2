@@ -2,8 +2,8 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `stroje-taneczne-v2`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Stroje Taneczne`,
+    siteUrl: `https://www.strojetaneczne.p`,
   },
   graphqlTypegen: true,
   plugins: [
@@ -13,7 +13,14 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `products`,
-        path: `${__dirname}/products`,
+        path: `${__dirname}/data/products`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/data/app`,
       },
     },
     // tailwind
@@ -25,6 +32,33 @@ const config: GatsbyConfig = {
     // lint/typecheck
     'gatsby-plugin-eslint',
     'gatsby-plugin-ts-checker',
+    // fonts
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`],
+        web: [
+          {
+            name: `Quicksand`,
+            file: `https://fonts.googleapis.com/css2?family=Quicksand&display=swap`,
+          },
+          {
+            name: `Poiret One`,
+            file: `https://fonts.googleapis.com/css2?family=Poiret+One&display=swap`,
+          },
+        ],
+      },
+    },
+    // icons
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets\/icons/,
+        },
+      },
+    },
   ],
 };
 

@@ -2,7 +2,7 @@ import Footer from 'components/footer';
 import Header from 'components/header';
 import * as React from 'react';
 
-function Layout({ children }: React.PropsWithChildren) {
+export default function Layout({ children }: React.PropsWithChildren) {
   return (
     <div>
       <Header />
@@ -11,5 +11,3 @@ function Layout({ children }: React.PropsWithChildren) {
     </div>
   );
 }
-
-export default Layout;

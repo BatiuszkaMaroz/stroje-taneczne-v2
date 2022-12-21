@@ -133,3 +133,15 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 ### Layout
 
 - [link](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)
+
+### I18n
+
+- On page translation - react-i18next-plugin,
+- Routing - route map for rendering and links,
+- Categorying - nestedSet with translations,
+- Posts - manual, currency, categories.
+
+### Animation
+
+- [list1](https://www.youtube.com/watch?v=nyg5Lpl6AiM)
+- [list2](https://www.youtube.com/watch?v=f4f7vwL4TcQ)
