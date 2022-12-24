@@ -145,3 +145,7 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 
 - [list1](https://www.youtube.com/watch?v=nyg5Lpl6AiM)
 - [list2](https://www.youtube.com/watch?v=f4f7vwL4TcQ)
+
+### Client-Side Routing
+
+On offer apply client-side routing, while still manually create pages in gatsby-node for all categories for pages to be crated as html's.

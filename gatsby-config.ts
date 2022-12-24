@@ -13,14 +13,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `products`,
-        path: `${__dirname}/data/products`,
-      },
-    },
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/data/app`,
+        path: `${__dirname}/products`,
       },
     },
     // tailwind
@@ -55,6 +48,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
+          // regexp
           include: /assets\/icons/,
         },
       },
