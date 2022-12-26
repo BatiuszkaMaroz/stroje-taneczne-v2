@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
     // lint/typecheck
     'gatsby-plugin-eslint',
     'gatsby-plugin-ts-checker',
-    // fonts
+    // fonts + config in tailwind
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
@@ -43,7 +43,7 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    // icons
+    // icons + config in custom.d.ts
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

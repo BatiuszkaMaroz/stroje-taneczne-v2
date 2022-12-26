@@ -77,23 +77,7 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 - lorem ipsum.
 ```
 
-## Page structure
-
-- **Strona główna** `/`
-- **Oferta** `/oferta`
-  - **Mężczyźni i chłopcy** `/mezczyzni-chlopcy`
-    - Kategoria `/kategoria`
-      - Przedmiot `/przedmiot`
-  - **Dziewczynki** `/dziewczynki`
-    - Kategoria `/kategoria`
-      - Przedmiot `/przedmiot`
-- **Wymiary** `/wymiary`
-- **Zamówienia** `/zamowienia`
-- **Kontakt** `/kontakt` - email, telefon, adres i mapa.
-- **Ulubione** - side panel
-- Search box - in header
-
-## Setup explanation
+## Setup
 
 ### Eslint
 
@@ -125,27 +109,50 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 
 ### Other
 
-- [Typecheck](https://www.gatsbyjs.com/plugins/gatsby-plugin-ts-checker/?=ts%20checker)
-- [MDX as data source](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/?=gatsby-plugin-mdx)
-- [Images](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/?=gatsby%20image)
 - [Tailwind.css](https://tailwindcss.com/docs/guides/gatsby)
+- [Creating layout](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)
+- [Client-side routing](https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/#creating-client-only-routes)
+- [Customizing HTML](https://www.gatsbyjs.com/docs/custom-html/)
 
-### Layout
+### Categories handling
 
-- [link](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)
+Offer page takes dynamic parameter with category string that will be using in regex against all products. Some most generic pages like `/mezczyzni` will be pre-rendered while more specific like `/dziewczynki/sukienki` will not.
 
-### I18n
+### Sidenav
 
-- On page translation - react-i18next-plugin,
-- Routing - route map for rendering and links,
-- Categorying - nestedSet with translations,
-- Posts - manual, currency, categories.
+Handling sidenav was quite a problem, what I learned is:
 
-### Animation
+- Fixed - element with `position: fixed` is viewport neutral so even if it exceeds the viewport, viewport will remain the same, browser will not try to change viewport size so it's perfect for hidden side navigation.
+- [Overflow](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) - setting `overflow: scroll | hidden` makes element a [scroll container](https://developer.mozilla.org/en-US/docs/Glossary/Scroll_container), meaning it is scrollable / has own scrollbars for its content.
+- [Sticky](https://developer.mozilla.org/en-US/docs/Web/CSS/position) - element with `position: sticky` sticks to nearest scroll container or viewport if such container does not exist.
+- Own scrollable element - if you set this you will be scrolling an html element so `window.scrollBy(x,y)` will not work. Also, there is possibility you will have scrollbars on viewport and on html element, so two scrollbars. Does not sound like a good idea overall.
 
-- [list1](https://www.youtube.com/watch?v=nyg5Lpl6AiM)
-- [list2](https://www.youtube.com/watch?v=f4f7vwL4TcQ)
+  ```css
+  html {
+    height: 100%;
+    width: 100%
+    overflow: scroll;
+  }
+  ```
 
-### Client-Side Routing
+- Exceeding viewport - on mobile browser if you exceed content horizontally, browser will align its viewport to it (to `old_size` + `excess_size`) so it will do something like zoom-out, then you will be able to do zoom-out to see the the page in this new size.
 
-On offer apply client-side routing, while still manually create pages in gatsby-node for all categories for pages to be crated as html's.
+  This is very problematic because your whole page is displayed wrong. Same effect can be seen if you create page and have header without RWD, header will be a lot wider that content and you will see something like this.
+
+  ```txt
+  HHHHHHHH
+  CCCC
+  CCCC
+  CCCC
+  ```
+
+  While you would like to have it like this.
+
+  ```txt
+  HHHH
+  CCCC
+  CCCC
+  CCCC
+  ```
+
+- Solution - technically you could disable zooming using `user-scalable=no` in viewport metatag but it is not good for [accessibility](https://www.boia.org/blog/web-accessibility-tips-dont-disable-zooming-yes-even-on-mobile). But hey, the problem is only in zooming-out, so the easy fix is to apply `minimum-scale=1` and that is the **PERFECT SOLUTION**. Now browser will not do zooming out on horizontal content excess, instead it will just apply scrollbars identically as on vertical axis.

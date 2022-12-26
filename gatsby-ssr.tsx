@@ -2,10 +2,24 @@ import { wrapPageElement } from './wrapPageElement';
 
 export { wrapPageElement };
 
-// creating portal
-
-// import { RenderBodyArgs } from 'gatsby';
 // import * as React from 'react';
-// export const onRenderBody = ({ setPreBodyComponents }: RenderBodyArgs) => {
-//   setPreBodyComponents([<div key={'sidenav'} id={'sidenav'}></div>]);
+// import { RenderBodyArgs } from 'gatsby';
+// export const onRenderBody = ({
+//   setHtmlAttributes,
+//   setHeadComponents,
+// }: RenderBodyArgs) => {
+//   // set language - problem: eslint accessibility in html.js
+//   // setHtmlAttributes({ lang: 'pl' });
+
+//   // creating portal
+//   // setPreBodyComponents([<div key={'sidenav'} id={'sidenav'}></div>]);
+
+//   // adding metatag - problem: duplicate metatags
+//   // setHeadComponents([
+//   //   <meta
+//   //     key='disable-zoom-out'
+//   //     name='viewport'
+//   //     content='width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1'
+//   //   />,
+//   // ]);
 // };

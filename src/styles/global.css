@@ -7,9 +7,4 @@
     font-family: Quicksand, system-ui, sans-serif;
     @apply text-gray-900;
   }
-
-  body {
-    /* required for sidenav */
-    overflow-x: hidden;
-  }
 }
