@@ -31,7 +31,8 @@
     "gatsby-transformer-sharp": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@graphql-eslint/eslint-plugin": "^3.13.1",

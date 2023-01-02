@@ -23,7 +23,9 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     // disable warning on function arguments
-    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }]
+    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }],
+    // disable proptypes as you use typescript
+    "react/prop-types": 0
   },
   "settings": {
     // detect react version

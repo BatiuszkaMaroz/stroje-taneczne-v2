@@ -33,7 +33,7 @@ export default function OfferPage({
 
 export const Head = ({ data }: HeadProps<Queries.OfferPageQuery>) => (
   // TODO implement categories map with titles and extensible for i18n
-  <Seo title='Oferta - Stroje Taneczne'></Seo>
+  <Seo title='Oferta - StrojeTaneczne.pl'></Seo>
 );
 
 export const query = graphql`

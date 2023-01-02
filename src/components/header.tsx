@@ -1,6 +1,4 @@
-import HeartIcon from 'assets/icons/heart.svg';
-import MenuIcon from 'assets/icons/menu.svg';
-import SearchIcon from 'assets/icons/search.svg';
+import { HeartIcon, MenuIcon, SearchIcon } from 'assets/icons';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
@@ -68,9 +66,9 @@ function OfferLinks() {
 function PageLinks() {
   return (
     <>
-      <Link to='/'>Zamówienia</Link>
-      <Link to='/'>Wymiary</Link>
-      <Link to='/'>Kontakt</Link>
+      <Link to='/zamowienia'>Zamówienia</Link>
+      <Link to='/wymiary'>Wymiary</Link>
+      <Link to='/kontakt'>Kontakt</Link>
     </>
   );
 }

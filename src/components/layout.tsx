@@ -42,9 +42,12 @@ export default function Layout({ children }: React.PropsWithChildren) {
       )}
       {/* ========== CONTENT ========== */}
       <div
-        className={clsx('relative z-0 translate-x-0 transition-all', {
-          'max-lg:translate-x-60': sideNavOpen,
-        })}
+        className={clsx(
+          'relative z-0 translate-x-0 transition-all min-h-screen flex flex-col',
+          {
+            'max-lg:translate-x-60': sideNavOpen,
+          },
+        )}
       >
         <Header toggleSideNav={toggleSideNav} />
         <main className='relative z-0'>{children}</main>

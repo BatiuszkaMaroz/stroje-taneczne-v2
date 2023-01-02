@@ -2,7 +2,7 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Stroje Taneczne`,
+    title: `StrojeTaneczne.pl`,
     siteUrl: `https://www.strojetaneczne.p`,
   },
   graphqlTypegen: true,
