@@ -113,7 +113,7 @@ Lorem ipsum. Lorem ipsum. Lorem ipsum.
 - [Creating layout](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)
 - [Client-side routing](https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/#creating-client-only-routes)
 - [Customizing HTML](https://www.gatsbyjs.com/docs/custom-html/)
-- Develop gatsby on local IP - `gatsby develop -H 192.168.1.24 -p 8000`
+- Develop gatsby on local IP - `gatsby develop -H 192.168.0.73 -p 8000`
 
 ### Categories handling
 
